@@ -1,0 +1,164 @@
+.certificate-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  text-transform: capitalize;
+
+}
+
+.certificate {
+  width: 98%;
+  max-width: 1020px;
+  background-color: white;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+
+  .record {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 100;
+    top: 85px;
+    margin-left: 460px;
+    color: white;
+    width         : 0;
+    height        : 0;
+    border-left   : 100px solid transparent;
+    border-right  : 100px solid transparent;  
+    border-bottom : 100px solid #C8C8C8;
+    transform     : rotate(45deg);
+
+    span {
+      margin-top: 70px;
+      font-size: 10px;
+    }
+  }
+  
+}
+
+.purple-cert {
+  width: 97%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(234, 208, 240, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .top-cert {
+    width: 92%;
+    height: 115px;
+    margin-top: 40px;
+    background-color: white;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left-top {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      h1 {
+        font-size: 12px;
+      }
+
+      .header-cert {
+        margin-left: 35px;
+        font-weight: bold;
+
+      }
+
+      .purple-square {
+        width: 150px;
+        height: 100%;
+        background-color: #C98AD9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .right-top {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 30px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: bold;
+
+      ul {
+      list-style-type: none;
+
+      .confirmed {
+        color: #51C067;
+      }
+
+      }
+    }
+  }
+}
+
+.bottom-cert {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 92%;
+
+  .bottom-left {
+
+    width: 48%;
+    background-color: white;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 90%;
+    }
+  }
+
+  .bottom-right {
+    width: 48%;
+    background-color: white;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 13px;
+    }
+
+    .art-info {
+      border: red 1px solid;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .art-info-title, .art-info-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        border: 1px solid gray;
+        height: 100%;
+
+        
+      }
+    }
+  }
+}
