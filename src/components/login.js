@@ -22,23 +22,22 @@ class Login extends React.Component {
     })
   };
 
+  fakeApiCall = () => Promise.resolve('fake api!');
 
-
-  submitForm = (e) => {
+  submitForm = async (e) => {
     e.preventDefault();
     // const object = {
     //   username: this.state.username,
     //   password: this.state.password
     // }
     // axios.post('http://localhost:5000/api/auth/login', object)
-    fetch() //a fake promise the line above is an example of a proper login
-      .then(res => {
-        localStorage.token = res.data.token;
-        this.setState({ ...this.setState, loggedIn: true })
-        alert('Successful log in')
-        //Redirect can be found here!
-        this.props.history.push("/");
-      })
+    await this.fakeApiCall().then(res => {
+      localStorage.token = res.data.token;
+      this.setState({ ...this.setState, loggedIn: true })
+      alert('Successful log in')
+      //Redirect can be found here!
+      this.props.history.push("/");
+    })
       .catch(err => {
         alert('unsuccessful log in')
       })
