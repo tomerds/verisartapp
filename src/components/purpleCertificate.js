@@ -1,5 +1,4 @@
 import '../styles/certificate.scss';
-import art from '../images/art.png';
 import qr from '../images/qrCode.png';
 
 import React from 'react';
@@ -7,8 +6,9 @@ import React from 'react';
 const PurpleCertificate = (props) => {
   return (
     <div className='purple-cert'>
-      <div className='record'><span>RECORD</span></div>
       <div className='top-cert'>
+        {/* Can't get record to stay in absolute correct position. Only works on desktop currently */}
+        {/* <div className='record'><span>RECORD</span></div> */}
         <div className='left-top'>
           <div className='purple-square'><h1>V</h1></div>
           <h1 className='header-cert'>CERTIFICATE</h1>
@@ -29,7 +29,7 @@ const PurpleCertificate = (props) => {
       <div className='bottom-cert'>
 
         <div className='bottom-left'>
-          <img src={art} alt='art'></img>
+          <img src={props.art} alt='art'></img>
         </div>
 
         <div className='bottom-right'>
@@ -39,7 +39,7 @@ const PurpleCertificate = (props) => {
           </div>
 
           <div className='art-info'>
-            <div className='art-info-item'>
+            <div className='art-info-item top-item'>
               <span className='art-info-title'>Title</span>
               <span className='art-info-data'>{props.artistInfo.title}</span>
             </div>
@@ -78,7 +78,7 @@ const PurpleCertificate = (props) => {
           </div>
 
           <div className='art-footer'>
-            <span>Verified by Verisart</span>
+            <span>VERIFIED BY VERISART</span>
             <img src={qr} alt='QR CODE'></img>
           </div>
 
